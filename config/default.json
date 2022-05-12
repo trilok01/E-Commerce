@@ -1,3 +1,4 @@
 {
-    "dbURI": "mongodb://localhost:27017/e-com"
+    "dbURI": "mongodb://localhost:27017/e-com",
+    "jwtsecret": "dhie587948tkdj89eut8e89e4utdfj89eurk89i"
 }

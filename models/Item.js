@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const { isInt } = require('validator');
 
 // Defining Item Schema
 const ItemSchema = new Schema({
@@ -17,7 +18,8 @@ const ItemSchema = new Schema({
     },
     price: {
         type: Number,
-        required: true
+        required: true,
+        min: 0
     },
     date_added: {
         type: Date,
