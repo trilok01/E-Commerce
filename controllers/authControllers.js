@@ -71,9 +71,17 @@ module.exports.login = (req, res) => {
                 });
             }
         );
-    });
+    })
+    .catch(err => res.send(err));
 }
 
 module.exports.get_user = (req, res) => {
-    console.log(req.user);
+    User.findById(req.user.id)
+    .select('-password')
+    .then(user => {
+        if(!user) return res.status(404).json({msg: 'User not found'});
+
+        res.json(user)
+    })
+    .catch(err => res.status(400).json({msg: 'Invalid user id'}));
 }
