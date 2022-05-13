@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const { isInt } = require('validator');
 
 // Defining Item Schema
 const ItemSchema = new Schema({

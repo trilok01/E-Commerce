@@ -4,6 +4,8 @@ const path = require('path');
 const config = require('config');
 const authAPI = require('./routes/auth');
 const itemAPI = require('./routes/item');
+const cartAPI = require('./routes/cart');
+const orderAPI = require('./routes/order');
 const heartBeat = require('./routes/getHeartBeat');
 
 const app = express();
@@ -19,6 +21,8 @@ if(process.env.NODE_ENV === 'production') {
 
 app.use('/auth', authAPI);
 app.use('/product', itemAPI);
+app.use('/cart', cartAPI);
+app.use('/order', orderAPI);
 app.get('/getHeartBeat', heartBeat);
 
 // connection to mongoDB and then running server on port 8000
