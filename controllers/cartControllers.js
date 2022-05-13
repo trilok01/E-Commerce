@@ -25,7 +25,7 @@ module.exports.add_cart_item = async (req, res) => {
         let cart = await Cart.findOne({userId});
         let item = await Item.findOne({_id: productId});
 
-        if(!item) res.status(404).send('Item not found');
+        if(!item) return res.status(404).send('Item not found');
 
         const price = item.price;
         const name = item.title;

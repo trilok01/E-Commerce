@@ -1,5 +1,0 @@
-{
-    "dbURI": "mongodb://localhost:27017/e-com",
-    "jwtsecret": "dhie587948tkdj89eut8e89e4utdfj89eurk89i",
-    "StripeAPIKey": "sk_test_51KydPFSGN1MaH2PXYdOnNBl2ZwuQJu4DWJAAs3VUMl1rPpXMFgUlsHeUvV43ijMnELWtf4snrw66AjcsJHf2ShYi0039bIVTld"
-}

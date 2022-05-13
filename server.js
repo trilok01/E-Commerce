@@ -1,7 +1,7 @@
+const dotenv = require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
-const config = require('config');
 const authAPI = require('./routes/auth');
 const itemAPI = require('./routes/item');
 const cartAPI = require('./routes/cart');
@@ -26,7 +26,7 @@ app.use('/order', orderAPI);
 app.get('/getHeartBeat', heartBeat);
 
 // connection to mongoDB and then running server on port 8000
-const dbURI = config.get('dbURI');
+const dbURI = process.env.dbURI;
 const PORT = process.env.PORT || 8000;
 
 mongoose.connect(dbURI, {})
